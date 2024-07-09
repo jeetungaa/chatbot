@@ -7,6 +7,7 @@ import Chatbot from './Chatbot'
 import GlobalStyle from './GlobalStyle'
 
 function App() {
+
   return (
     <BrowserRouter>
       <Routes>
