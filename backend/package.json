@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node index.js",
-    "build": "npm i"
+    "build": "npm i",
+    "prod": "NODE_ENV=production nodemon server.js"
   },
   "keywords": [],
   "author": "",

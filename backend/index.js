@@ -12,6 +12,10 @@ app.use(cors());
 
 mongoose.connect('mongodb+srv://jeetungaa:vaasu7945@cluster0.sfuksba.mongodb.net/');
 
+const path = require("path");
+
+app.use(express.static(path.join(__dirname, "dist")));
+
 // Login endpoint
 app.post("/login", (req, res) => {
     const { email, password } = req.body;
