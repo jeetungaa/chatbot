@@ -73,6 +73,6 @@ app.post("/chatbot", async (req, res) => {
     }
 });
 
-app.listen(3001, () => {
+app.listen(10000, () => {
     console.log("server is running");
 });
