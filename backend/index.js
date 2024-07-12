@@ -73,6 +73,8 @@ app.post("/chatbot", async (req, res) => {
     }
 });
 
-app.listen(10000, () => {
-    console.log("server is running");
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server is running on http://0.0.0.0:${PORT}`);
 });
