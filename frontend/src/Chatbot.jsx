@@ -18,7 +18,7 @@ const Chatbot = () => {
     setResponses(newResponses);
 
     try {
-      const response = await axios.post('http://localhost:3001/chatbot', { message: userMessage });
+      const response = await axios.post('https://chatbot41.onrender.com/chatbot', { message: userMessage });
       
       newResponses[newResponses.length - 1].bot = response.data.reply;
       setResponses([...newResponses]);
