@@ -12,7 +12,7 @@ function Signup() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post("https://chatbot41.onrender.com/", { name, email, password })
+        axios.post("https://chatbot3-oac0.onrender.com/", { name, email, password })
         .then(result => {console.log(result)
         navigate("/login")
         })
