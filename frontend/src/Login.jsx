@@ -11,7 +11,7 @@ function Login() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post("https://chatbot3-oac0.onrender.com/login", { email, password })
+        axios.post("https://chatbot-6-2t22.onrender.com/login", { email, password })
         .then(result => {
             console.log(result)
             if(result.data === "Success"){
