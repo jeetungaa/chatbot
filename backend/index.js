@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const path = require("path");
 const axios = require("axios");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const EmployeeModel = require("./models/Employee");
@@ -12,8 +13,17 @@ app.use(cors());
 
 mongoose.connect('mongodb+srv://jeetungaa:vaasu7945@cluster0.sfuksba.mongodb.net/');
 
+// Root route for testing
 app.get("/", (req, res) => {
     res.send("Hello, world!");
+});
+
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, "./dist")));
+
+// Handle any other requests by sending the built React app
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "./dist", "index.html"));
 });
 
 // Login endpoint
